@@ -30,11 +30,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     status: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: "PENDING"
     },
     notificationTime: {
-      type: DataTypes.STRING,
-      allowNull:false
+      type: DataTypes.DATE,
+      allowNull: false,
     },
   }, {
     sequelize,
@@ -42,3 +43,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return NotificationTicket;
 };
+
